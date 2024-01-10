@@ -41,5 +41,23 @@ position = Vector2(-1, 0)
 node_a = NodePath("..")
 node_b = NodePath("../../Pole")
 
+[node name="WheelDrag" parent="." instance=ExtResource("2_nocoa")]
+position = Vector2(249, 204)
+
+[node name="PinWheelBot" type="PinJoint2D" parent="WheelDrag"]
+position = Vector2(-1, 0)
+node_a = NodePath("..")
+node_b = NodePath("../../DragPole")
+
+[node name="PinWheelBot2" type="PinJoint2D" parent="WheelDrag"]
+position = Vector2(1, -126)
+node_a = NodePath("../../Pole")
+node_b = NodePath("../../DragPole")
+
 [node name="Pole" parent="." instance=ExtResource("3_fn628")]
 position = Vector2(249, 77)
+
+[node name="DragPole" parent="." instance=ExtResource("3_fn628")]
+position = Vector2(249, 140)
+rotation = 1.5708
+scale = Vector2(0.5, 1)
